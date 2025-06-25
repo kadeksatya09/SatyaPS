@@ -9,12 +9,12 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #1c1c1c, #2c3e50);
       color: #f5f5f5;
-      text-align: center;
     }
     header {
       background: #111;
       padding: 40px 20px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      text-align: center;
     }
     header h1 {
       margin: 0;
@@ -30,15 +30,20 @@
       max-width: 900px;
       margin: 30px auto;
       padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .server-status {
+    .section-box {
+      width: 100%;
       background: #222;
       padding: 25px;
       border-radius: 12px;
-      margin-bottom: 25px;
+      margin: 15px 0;
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      text-align: center;
     }
-    .server-status h2 {
+    .section-box h2 {
       margin-bottom: 10px;
       color: #03a9f4;
     }
@@ -50,17 +55,11 @@
       border-radius: 8px;
       text-decoration: none;
       font-size: 1em;
-      margin: 10px;
+      margin: 10px auto;
       transition: 0.3s ease;
     }
     .btn-download:hover {
       background: #0288d1;
-    }
-    .domains {
-      background: #1e1e1e;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 30px;
     }
     .domains code {
       display: block;
@@ -72,11 +71,14 @@
       font-family: monospace;
     }
     .copy-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
       background: #1e1e1e;
-      padding: 20px;
+      padding: 15px;
       border-radius: 10px;
-      margin: 20px auto;
-      width: fit-content;
+      margin-top: 15px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
     .copy-input {
@@ -84,9 +86,9 @@
       color: #eee;
       border: none;
       padding: 12px;
-      width: 320px;
+      width: 300px;
       border-radius: 6px;
-      margin-right: 8px;
+      margin: 5px;
     }
     .copy-btn {
       background: #00c853;
@@ -96,6 +98,7 @@
       border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
+      margin: 5px;
     }
     .copy-btn:hover {
       background: #00b342;
@@ -106,6 +109,7 @@
       color: #aaa;
       background: #111;
       margin-top: 40px;
+      text-align: center;
     }
   </style>
 </head>
@@ -115,35 +119,45 @@
     <p><strong>🔰 Apa Itu SatyaPS?</strong><br><br>
     SatyaPS (singkatan dari Satya Private Server) adalah sebuah server Growtopia Private yang dirancang untuk memberikan pengalaman bermain terbaik bagi para pemainnya. Dibuat dengan semangat komunitas dan inovasi, SatyaPS menghadirkan fitur eksklusif, role sistem unik, serta lingkungan yang ramah dan aktif.</p>
   </header>  <div class="container">
-    <div class="server-status">
-      <h2>Status Server:</h2>
-      <p id="status">STATUS SERVER: 🔴</p>
-    </div><p><strong>LINK VHOST (Auto Download):</strong></p>
-<a href="https://www.mediafire.com/file/ae7v0w27yt9uqih/SatyaPS.txt/file" class="btn-download" target="_blank">⬇️ Download VHOST SatyaPS.txt</a>
-
-<p><strong>LINK POWERTUNNEL:</strong></p>
-<div class="copy-box">
-  <input type="text" id="ptunnel" class="copy-input" value="https://gtpshost.com/SatyaPS.txt" readonly>
-  <button onclick="copyLink('ptunnel')" class="copy-btn">📋 Copy Link</button>
+    <div class="section-box">
+      <h2>Status Server</h2>
+      <p style="font-size: 1.5em; color: #00e676;">STATUS SERVER: 🟢</p>
+    </div><div class="section-box">
+  <h2>LINK VHOST (Auto Download)</h2>
+  <a href="https://www.mediafire.com/file/ae7v0w27yt9uqih/SatyaPS.txt/file" class="btn-download" target="_blank">⬇️ Download VHOST SatyaPS.txt</a>
 </div>
 
-<p><strong>LINK SURGE 5:</strong></p>
-<div class="copy-box">
-  <input type="text" id="surge" class="copy-input" value="https://ios.gtpshost.com/SatyaPS" readonly>
-  <button onclick="copyLink('surge')" class="copy-btn">📋 Copy Link</button>
+<div class="section-box">
+  <h2>LINK POWERTUNNEL</h2>
+  <div class="copy-box">
+    <input type="text" id="ptunnel" class="copy-input" value="https://gtpshost.com/SatyaPS.txt" readonly>
+    <button onclick="copyLink('ptunnel')" class="copy-btn">📋 Copy Link</button>
+  </div>
 </div>
 
-<div class="domains">
-  <h3>Gunakan Domain berikut:</h3>
-  <code>91.134.85.13 growtopia1.com</code>
-  <code>91.134.85.13 growtopia2.com</code>
-  <code>91.134.85.13 www.growtopia1.com</code>
-  <code>91.134.85.13 www.growtopia2.com</code>
-  <code>91.134.85.13 RvLnd.here</code>
+<div class="section-box">
+  <h2>LINK SURGE 5</h2>
+  <div class="copy-box">
+    <input type="text" id="surge" class="copy-input" value="https://ios.gtpshost.com/SatyaPS" readonly>
+    <button onclick="copyLink('surge')" class="copy-btn">📋 Copy Link</button>
+  </div>
+</div>
+
+<div class="section-box">
+  <h2>Domain</h2>
+  <div class="domains">
+    <code>91.134.85.13 growtopia1.com</code>
+    <code>91.134.85.13 growtopia2.com</code>
+    <code>91.134.85.13 www.growtopia1.com</code>
+    <code>91.134.85.13 www.growtopia2.com</code>
+    <code>91.134.85.13 RvLnd.here</code>
+  </div>
   <p style="margin-top:10px;">Edit file <code>hosts</code> di perangkatmu agar bisa connect.</p>
 </div>
 
-<a href="https://wa.me/62881011316926" class="btn-download" style="background:#009688;">📱 Chat Admin via WhatsApp</a>
+<div class="section-box">
+  <a href="https://wa.me/62881011316926" class="btn-download" style="background:#009688;">📱 Chat Admin via WhatsApp</a>
+</div>
 
   </div>  <footer>
     &copy; 2025 SatyaPS | All rights reserved.
@@ -155,18 +169,5 @@
       document.execCommand("copy");
       alert("Link berhasil disalin: " + copyText.value);
     }
-
-    // Cek status server
-    fetch("http://91.134.85.13", { method: "HEAD" })
-      .then(response => {
-        if (response.ok) {
-          document.getElementById("status").innerHTML = "STATUS SERVER: 🟢";
-        } else {
-          document.getElementById("status").innerHTML = "STATUS SERVER: 🔴";
-        }
-      })
-      .catch(error => {
-        document.getElementById("status").innerHTML = "STATUS SERVER: 🔴";
-      });
   </script></body>
 </html>

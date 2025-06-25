@@ -1,72 +1,99 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Growtopia Private Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SatyaPS - Growtopia Private Server</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
       text-align: center;
-    }header {
-  padding: 30px 10px;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-  color: #00e676;
-}
-
-p {
-  font-size: 18px;
-  margin: 5px 0;
-}
-
-.ip-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  margin: 30px auto;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-code {
-  font-family: monospace;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 2px 5px;
-  border-radius: 5px;
-}
-
-footer {
-  margin-top: 40px;
-  font-size: 14px;
-  color: #aaa;
-}
-
+    }
+    header {
+      background: #222;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      color: #4CAF50;
+      font-size: 2.5em;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    .server-status {
+      background: #333;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .server-status p {
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+    .btn-download {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.2em;
+      margin: 10px;
+    }
+    .domains {
+      background: #222;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .domains code {
+      display: block;
+      margin: 5px 0;
+      background: #111;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    footer {
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>🌐 Growtopia Private Server</h1>
-    <p>Server Custom Untuk Komunitas</p>
-  </header>  <div class="ip-card">
-    <h2>Server Information</h2>
-    <p><strong>IP:</strong> <code>91.134.85.13</code></p>
-    <p><strong>growtopia1.com</strong></p>
-    <p><strong>growtopia2.com</strong></p>
-    <p><strong>www.growtopia1.com</strong></p>
-    <p><strong>www.growtopia2.com</strong></p>
-    <br/>
-    <p>🌟 Ganti hosts file kamu agar bisa connect!</p>
-  </div>  <footer>
-    &copy; 2025 Satya Private Server | Hosting Gratis
+    <h1>Satya<span style="color:#fff;">PS</span></h1>
+    <p>Growtopia Private Server Kamu!</p>
+  </header>
+
+  <div class="container">
+    <div class="server-status">
+      <h2>Status Server:</h2>
+      <p><strong>Online</strong> – IP: <code>91.134.85.13</code></p>
+    </div>
+
+    <a href="#" class="btn-download">⬇️ Download Launcher</a>
+
+    <div class="domains">
+      <h3>Gunakan Domain berikut:</h3>
+      <code>growtopia1.com → 91.134.85.13</code>
+      <code>growtopia2.com → 91.134.85.13</code>
+      <code>www.growtopia1.com → 91.134.85.13</code>
+      <code>www.growtopia2.com → 91.134.85.13</code>
+      <p style="margin-top:10px;">Edit file `hosts` di perangkatmu agar bisa connect.</p>
+    </div>
+
+    <a href="https://wa.me/6281234567890" class="btn-download" style="background:#009688;">📱 Chat Admin via WhatsApp</a>
+  </div>
+
+  <footer>
+    &copy; 2025 SatyaPS | All rights reserved.
   </footer>
 </body>
 </html>

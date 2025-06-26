@@ -90,8 +90,41 @@
     box-sizing: border-box;
   }
 </style>
+<style>
+  .toggle-theme {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    transition: background 0.3s, color 0.3s;
+  }
+  body.light {
+    background: #f0f0f0;
+    color: #111;
+  }
+  body.light .container, body.light .box {
+    background: #ffffff;
+    color: #111;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+  body.light .btn-glow {
+    background: linear-gradient(90deg, #007bff, #00bcd4);
+    color: #fff;
+    box-shadow: none;
+  }
+</style>
 </head>
 <body>
+  <button class="toggle-theme" onclick="toggleTheme()">🌓 Ganti Tema</button>
   <div class="container">
     <h1 class="glow-title">SatyaPS</h1>
     <div class="box">
@@ -148,7 +181,6 @@
       <li>Masuk ke "IMPORT" → "Download Profile from URL"</li>
       <li>Masukkan URL dari tombol iOS Host URL di atas</li>
       <li>Ketuk "OK" dan "Done", lalu "SETUP"</li>
-      $1
 
 </ul>
 <p><strong>🔗 Link SURGE 5 iOS:</strong> <a href="https://apps.apple.com/us/app/surge-5/id1442620678" target="_blank">https://apps.apple.com/us/app/surge-5/id1442620678</a></p>
@@ -173,6 +205,9 @@
     var guideBox = document.getElementById("guideBox");
     guideBox.style.display = guideBox.style.display === "none" ? "block" : "none";
   }
+function toggleTheme() {
+  document.body.classList.toggle("light");
+}
 </script></div><script>
     function copyText(id) {
       const input = document.getElementById(id);

@@ -116,6 +116,11 @@
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
+  @keyframes rgbGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 </style>
 </head>
 <body>
@@ -133,6 +138,17 @@
     text-shadow: 0 0 12px rgba(255,255,255,0.2);
     margin-bottom: 20px;
   ">SatyaPS</h2>
+  <h3 style="
+    font-size: 1.5em;
+    font-weight: bold;
+    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: rgbGlow 6s ease infinite;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(255,255,255,0.2);
+    margin: 10px 0 20px;
+  ">SatyaPS</h3>
   <p style="
     font-size: 1.1em;
     color: #ddd;
@@ -168,21 +184,11 @@
 </div>
 
 <div class="section-box">
-  <h2>LINK WINDOWS</h2>
+  <h2>LINK VHOST</h2>
 
-<a href="https://www.mediafire.com/file/ae7v0w27yt9uqih/SatyaPS.txt/file" class="btn-download" target="_blank">⬇️ Download SatyaPS.txt</a>
+<a href="https://www.mediafire.com/file/ae7v0w27yt9uqih/SatyaPS.txt/file?dkey=w8drt2yq9ik&r=172" class="btn-download" target="_blank">⬇️ Download SatyaPS.txt</a> </div>
 
-<div class="copy-box" style="margin-top: 20px;">
-  <textarea id="vhostList" class="copy-input" rows="6" style="width: 100%; max-width: 600px; resize: none;">
-91.134.85.13 growtopia1.com
-91.134.85.13 growtopia2.com
-91.134.85.13 www.growtopia1.com
-91.134.85.13 www.growtopia2.com
-91.134.85.13 RvLnd.here
-  </textarea>
-  <button onclick="copyVhost()" class="copy-btn" style="margin-top: 10px;">📋 Copy WINDOWS</button>
-</div>
-    </div><div class="section-box">
+<div class="section-box">
   <a href="https://wa.me/62881011316926" class="btn-download" style="background:#009688;">📱 Chat Admin via WhatsApp</a>
 </div>
 

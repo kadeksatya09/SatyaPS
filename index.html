@@ -33,7 +33,7 @@
     }
     .box {
       background: #0d0d19;
-      border: 1px solid #00ffe7;
+      border: 1px solid rgba(0,255,255,0.6);
       padding: 20px;
       border-radius: 12px;
       margin-top: 25px;
@@ -57,23 +57,28 @@
       color: #fff;
       border: none;
       border-radius: 8px;
-      background: linear-gradient(135deg, #00ffe7, #338fff, #a64dff, #ff2cc3, #00ffe7);
+      background: linear-gradient(135deg, #00ffae, #00c3ff, #7f00ff, #ff2cc3, #00ffae);
       background-size: 300% 300%;
-      box-shadow: 0 0 25px rgba(0,255,255,0.4);
+      box-shadow: 0 0 20px #00ffae, 0 0 40px #00c3ff, 0 0 60px #ff2cc3;
       cursor: pointer;
       animation: glowMove 5s ease infinite;
     }
     .input-box {
-      background: #0a0a14;
-      border: 1px solid #333;
-      padding: 12px;
-      border-radius: 8px;
-      color: #0ff;
-      font-family: monospace;
-      width: 100%;
-      max-width: 600px;
-      margin: 10px auto;
-    }
+  background: #0a0a14;
+  border: 1px solid #333;
+  padding: 12px;
+  border-radius: 8px;
+  color: #00ffe7;
+  font-family: monospace;
+  width: 90%;
+  max-width: 600px;
+  margin: 10px auto;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  border: none;
+  outline: none;
+}
     @keyframes glowMove {
       0% {background-position: 0% 50%}
       50% {background-position: 100% 50%}
@@ -90,7 +95,7 @@
       </p>
     </div><div class="box">
   <h2>LINK VHOST</h2>
-  <a href="https://www.mediafire.com/file/ae7v0w27yt9uqih/SatyaPS.txt/file?dkey=w8drt2yq9ik&r=172" class="btn-glow">⬇️ DOWNLOAD VHOST</a>
+  <a href="https://www.mediafire.com/file/ae7v0w27yt9uqih/SatyaPS.txt/file?dkey=w8drt2yq9ik&r=172" class="btn-glow" style="text-decoration: none;">⬇️ DOWNLOAD VHOST</a>
 </div>
 
 <div class="box">

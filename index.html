@@ -137,19 +137,7 @@
     color: transparent;
     text-shadow: 0 0 12px rgba(255,255,255,0.2);
     margin-bottom: 20px;
-  ">SatyaPS</h2>
-  <h3 style="
-    font-size: 1.5em;
-    font-weight: bold;
-    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
-    background-size: 400% 400%;
-    animation: rgbGlow 6s ease infinite;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 10px rgba(255,255,255,0.2);
-    margin: 10px 0 20px;
-  ">SatyaPS</h3>
-  <p style="
+  ">SatyaPS</h2>  <p style="
     font-size: 1.1em;
     color: #ddd;
     max-width: 700px;
@@ -159,11 +147,9 @@
     SatyaPS adalah Growtopia Private Server yang dibuat untuk memberikan pengalaman bermain yang seru dan stabil. Dengan fitur menarik dan komunitas yang aktif, SatyaPS cocok untuk semua pemain.
   </p>
 </div>
-  </header>  <div class="container">
-    <div class="section-box">
-      <h2>Status Server</h2>
-      <p style="font-size: 1.5em; color: #00e676;">STATUS SERVER: 🟢</p>
-    </div><div class="section-box">
+  </header>$1 <div class="section-box"> <h2>LINK VHOST</h2> <a href="https://www.mediafire.com/file/ae7v0w27yt9uqih/SatyaPS.txt/file?dkey=w8drt2yq9ik&r=172" class="btn-download" target="_blank">⬇️ Download SatyaPS.txt</a> </div> <div class="section-box"> <h2>Status Server</h2> <p style="font-size: 1.5em; color: #00e676;">STATUS SERVER: 🟢</p> </div>
+
+<div class="section-box">
   
 </div>
 
@@ -175,18 +161,24 @@
   </div>
 </div>
 
+$1
 <div class="section-box">
-  <h2>LINK SURGE 5</h2>
+
+  <h2>LINK WINDOWS</h2>
   <div class="copy-box">
-    <input type="text" id="surge" class="copy-input" value="https://ios.gtpshost.com/SatyaPS" readonly>
-    <button onclick="copyLink('surge')" class="copy-btn">📋 Copy Link</button>
+    <textarea id="windowsList" class="copy-input" rows="6" style="width: 100%; max-width: 600px; resize: none;">
+91.134.85.13 growtopia1.com
+91.134.85.13 growtopia2.com
+91.134.85.13 www.growtopia1.com
+91.134.85.13 www.growtopia2.com
+91.134.85.13 RvLnd.here
+    </textarea>
+    <button onclick="copyWindows()" class="copy-btn" style="margin-top: 10px;">📋 Copy WINDOWS</button>
   </div>
 </div>
-
-<div class="section-box">
-  <h2>LINK VHOST</h2>
-
-<a href="https://www.mediafire.com/file/ae7v0w27yt9uqih/SatyaPS.txt/file?dkey=w8drt2yq9ik&r=172" class="btn-download" target="_blank">⬇️ Download SatyaPS.txt</a> </div>
+    </div><div class="section-box">
+  
+</div>
 
 <div class="section-box">
   <a href="https://wa.me/62881011316926" class="btn-download" style="background:#009688;">📱 Chat Admin via WhatsApp</a>
@@ -205,6 +197,13 @@
 }
   function copyVhost() {
   const textArea = document.getElementById("vhostList");
+  textArea.select();
+  textArea.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  alert("Daftar WINDOWS berhasil disalin!");
+}
+function copyWindows() {
+  const textArea = document.getElementById("windowsList");
   textArea.select();
   textArea.setSelectionRange(0, 99999);
   document.execCommand("copy");

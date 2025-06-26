@@ -114,8 +114,58 @@
   <h2>GROUP DISCORD</h2>
   <a href="https://discord.gg/TV248WW5" class="btn-glow" target="_blank">💬 JOIN GROUP DISCORD</a>
 </div>
+  <div class="box">
+  <h2>CARA BERMAIN</h2>
+  <button class="btn-glow" onclick="toggleGuide()">📖 BUKA PANDUAN</button>
+  <div id="guideBox" style="display: none; margin-top: 20px; text-align: left;">
+    <h3 style="color:#00ffe7;">📱 Panduan Android 1 (Vhost)</h3>
+    <ul>
+      <li>Unduh aplikasi VHOST</li>
+      <li>Buka aplikasinya dan masukkan host</li>
+      <li>Aktifkan host dan langsung bisa digunakan</li>
+    </ul>
+    <p><strong>🔗 Link Vhost APK:</strong> <a href="https://sfile.mobi/3IuVsId79mw" target="_blank">https://sfile.mobi/3IuVsId79mw</a></p>
 
-  </div><script>
+    <h3 style="color:#00ffe7;">📱 Panduan Android 2 (PowerTunnel)</h3>
+    <ul>
+      <li>Unduh PowerTunnel</li>
+      <li>Klik tombol PowerTunnel URL di atas untuk menyalin host URL</li>
+      <li>Buka PowerTunnel, ketuk menu (☰), lalu pilih Host Settings</li>
+      <li>Tempel URL yang disalin, lalu atur host update period menjadi "on start"</li>
+      <li>Buka Growtopia dan nikmati server pribadimu!</li>
+    </ul>
+
+    <h3 style="color:#00ffe7;">📱 Panduan iOS (Surge 5)</h3>
+    <ul>
+      <li>Unduh Surge 5 dari App Store</li>
+      <li>Ketuk "OK", lalu pilih "Default.conf"</li>
+      <li>Masuk ke "IMPORT" → "Download Profile from URL"</li>
+      <li>Masukkan URL dari tombol iOS Host URL di atas</li>
+      <li>Ketuk "OK" dan "Done", lalu "SETUP"</li>
+      <li>Izinkan konfigurasi VPN dan buka Growtopia!</li>
+    </ul>
+
+    <h3 style="color:#00ffe7;">💻 Panduan Windows</h3>
+    <ul>
+      <li>Tekan ⊞ Win + R untuk membuka jendela Run</li>
+      <li>Ketik <code>C:\Windows\System32\drivers\etc</code> lalu tekan Enter</li>
+      <li>Cari dan klik kanan file <code>hosts</code></li>
+      <li>Buka dengan Notepad (jalankan sebagai Administrator jika perlu)</li>
+      <li>Tambahkan IP & DOMAIN ke bagian bawah file hosts</li>
+      <li>Simpan file lalu buka Growtopia untuk terhubung!</li>
+    </ul>
+
+    <p><strong>🔗 Link PowerTunnel APK:</strong> <a href="https://sfile.mobi/9yeA3hP6fYz" target="_blank">https://sfile.mobi/9yeA3hP6fYz</a></p>
+    <p><strong>🔗 Link SURGE 5 iOS:</strong> <a href="https://apps.apple.com/us/app/surge-5/id1442620678" target="_blank">https://apps.apple.com/us/app/surge-5/id1442620678</a></p>
+  </div>
+</div>
+
+<script>
+  function toggleGuide() {
+    var guideBox = document.getElementById("guideBox");
+    guideBox.style.display = guideBox.style.display === "none" ? "block" : "none";
+  }
+</script></div><script>
     function copyText(id) {
       const input = document.getElementById(id);
       input.select();

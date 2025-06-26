@@ -1,226 +1,117 @@
 <!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SatyaPS - Growtopia Private Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SatyaPS - GTPS</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1c1c1c, #2c3e50);
-      color: #f5f5f5;
-    }
-    header {
-      background: #111;
-      padding: 40px 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      background: #0f0f1b;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
       text-align: center;
+      padding: 30px 15px;
     }
-    header h1 {
-      margin: 0;
-      color: #00e676;
+    .glow-title {
       font-size: 3em;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 1.1em;
-      color: #ccc;
+      font-weight: bold;
+      background: linear-gradient(90deg, #00fff7, #007bff, #ff00ff, #ff8800);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowMove 5s ease infinite;
+      text-shadow: 0 0 20px rgba(255,255,255,0.1);
     }
     .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .section-box {
-      width: 100%;
-      background: #222;
+      max-width: 700px;
+      margin: 0 auto;
       padding: 25px;
+      background: #111827;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0,255,255,0.05);
+      margin-bottom: 30px;
+    }
+    .box {
+      background: #0d0d19;
+      border: 1px solid #00ffc3;
+      padding: 20px;
       border-radius: 12px;
-      margin: 15px 0;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      text-align: center;
+      margin-top: 25px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
     }
-    .section-box h2 {
+    h2 {
+      font-size: 1.6em;
+      color: #00ccff;
       margin-bottom: 10px;
-      color: #03a9f4;
     }
-    .btn-download {
+    p {
+      line-height: 1.6em;
+      color: #ccc;
+    }
+    .btn-glow {
       display: inline-block;
-      background: #03a9f4;
-      color: white;
       padding: 15px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1em;
-      margin: 10px auto;
-      transition: 0.3s ease;
-    }
-    .btn-download:hover {
-      background: #0288d1;
-    }
-    .domains code {
-      display: block;
-      margin: 8px 0;
-      background: #000;
-      padding: 10px;
-      border-radius: 6px;
-      color: #76ff03;
-      font-family: monospace;
-    }
-    .copy-box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      background: #1e1e1e;
-      padding: 15px;
-      border-radius: 10px;
       margin-top: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    .copy-input {
-      background: #333;
-      color: #eee;
-      border: none;
-      padding: 12px;
-      width: 300px;
-      border-radius: 6px;
-      margin: 5px;
-    }
-    .copy-btn {
-      background: #00c853;
-      color: white;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 6px;
-      cursor: pointer;
+      font-size: 1em;
       font-weight: bold;
-      margin: 5px;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00fff7, #007bff, #ff00ff);
+      background-size: 300% 300%;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      cursor: pointer;
+      animation: glowMove 5s ease infinite;
     }
-    .copy-btn:hover {
-      background: #00b342;
+    .input-box {
+      background: #0a0a14;
+      border: 1px solid #333;
+      padding: 12px;
+      border-radius: 8px;
+      color: #0ff;
+      font-family: monospace;
+      width: 100%;
+      max-width: 600px;
+      margin: 10px auto;
     }
-    footer {
-      padding: 30px;
-      font-size: 0.9em;
-      color: #aaa;
-      background: #111;
-      margin-top: 40px;
-      text-align: center;
+    @keyframes glowMove {
+      0% {background-position: 0% 50%}
+      50% {background-position: 100% 50%}
+      100% {background-position: 0% 50%}
     }
-    @keyframes rgbGlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  @keyframes rgbGlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  @keyframes rgbGlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }.neon-box { border-radius: 12px; box-shadow: 0 0 20px rgba(0,255,255,0.2), 0 0 40px rgba(0,255,255,0.1); border: 1px solid rgba(0,255,255,0.2); padding: 20px; background: #1b1b1b; margin-bottom: 30px; }
-
-.neon-btn { background: linear-gradient(90deg, #00f7ff, #00ff91); border: none; padding: 15px 25px; font-size: 1.1em; border-radius: 8px; color: #fff; text-shadow: 0 0 6px rgba(255,255,255,0.4); box-shadow: 0 0 10px rgba(0,255,255,0.6); transition: all 0.3s ease; cursor: pointer; margin-top: 10px; }
-
-.neon-btn:hover { box-shadow: 0 0 15px rgba(0,255,255,0.8), 0 0 25px rgba(0,255,255,0.6); transform: scale(1.05); }
-
-.neon-heading { font-size: 2.2em; font-weight: 800; background: linear-gradient(270deg, #0ff, #0f0, #0ff); background-size: 600% 600%; animation: rgbGlow 8s ease infinite; -webkit-background-clip: text; color: transparent; text-shadow: 0 0 12px rgba(0,255,255,0.3); margin-bottom: 20px; text-align: center; } </style>
-
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Satya<span style="color:#fff;">PS</span></h1>
-    <div style="margin-top: 30px; padding: 30px; background: #1f1f1f; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.5); text-align: center;">
-  <h2 style="
-    font-size: 2.2em;
-    font-weight: 800;
-    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
-    background-size: 400% 400%;
-    animation: rgbGlow 6s ease infinite;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 12px rgba(255,255,255,0.2);
-    margin-bottom: 20px;
-  ">SatyaPS</h2>  <p style="
-    font-size: 1.1em;
-    color: #ddd;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-  ">
-    SatyaPS adalah Growtopia Private Server yang dibuat untuk memberikan pengalaman bermain yang seru dan stabil. Dengan fitur menarik dan komunitas yang aktif, SatyaPS cocok untuk semua pemain.
-  </p>
-</div>
-  </header><div class="section-box">
-  <h2>Status Server</h2>
-  <p style="font-size: 1.5em; color: #00e676;">STATUS SERVER: 🟢</p>
+  <div class="container">
+    <h1 class="glow-title">SatyaPS</h1>
+    <div class="box">
+      <p>
+        SatyaPS adalah Growtopia Private Server yang dibuat untuk memberikan pengalaman bermain yang seru dan stabil. Dengan fitur menarik dan komunitas yang aktif, SatyaPS cocok untuk semua pemain.
+      </p>
+    </div><div class="box">
+  <h2>LINK VHOST</h2>
+  <a href="https://www.mediafire.com/file/ae7v0w27yt9uqih/SatyaPS.txt/file?dkey=w8drt2yq9ik&r=172" class="btn-glow">⬇️ DOWNLOAD VHOST</a>
 </div>
 
-<div class="section-box">
-  
+<div class="box">
+  <h2>LINK PTUNNEL</h2>
+  <input class="input-box" id="ptunnel" readonly value="https://gtpshost.com/SatyaPS.txt">
+  <button class="btn-glow" onclick="copyText('ptunnel')">📋 COPY LINK PTUNNEL</button>
 </div>
 
-<div class="section-box">
-  <h2>LINK POWERTUNNEL</h2>
-  <div class="copy-box">
-    <input type="text" id="ptunnel" class="copy-input" value="https://gtpshost.com/SatyaPS.txt" readonly>
-    <button onclick="copyLink('ptunnel')" class="neon-btn">📋 Copy Link</button>
-  </div>
-</div>
+<div class="box">
+  <h2>LINK WINDOWS</h2>
+  <textarea class="input-box" id="windows" rows="5" readonly>
 
+91.134.85.13 growtopia1.com 91.134.85.13 growtopia2.com 91.134.85.13 www.growtopia1.com 91.134.85.13 www.growtopia2.com 91.134.85.13 RvLnd.here </textarea> <button class="btn-glow" onclick="copyText('windows')">📋 COPY WINDOWS</button> </div>
 
-<div class="section-box" style="box-shadow: 0 0 15px rgba(0,255,255,0.2);">
-
-  <h2 style="color: #00e5ff; font-size: 1.8em; margin-bottom: 15px; text-shadow: 0 0 10px #00e5ff;">LINK WINDOWS</h2>
-  <div class="copy-box">
-    <textarea id="windowsList" class="copy-input" rows="6" style="width: 100%; max-width: 600px; resize: none; background-color: #1b1b1b; border: 1px solid #333; color: #76ff03; font-family: monospace;">91.134.85.13 growtopia1.com
-91.134.85.13 growtopia2.com
-91.134.85.13 www.growtopia1.com
-91.134.85.13 www.growtopia2.com
-91.134.85.13 RvLnd.here</textarea>
-    <button onclick="copyWindows()" class="neon-btn" style="margin-top: 10px; background-color: #00e676; box-shadow: 0 0 10px #00e676;">📋 Copy WINDOWS</button>
-  </div>
-</div>
-</div>
-    </div><div class="section-box">
-  
-</div>
-
-<div class="section-box">
-  <a href="https://wa.me/62881011316926" class="neon-btn" style="background:#009688;">📱 Chat Admin via WhatsApp</a>
-</div>
-
-  </div>  <footer>
-    &copy; 2025 SatyaPS | All rights reserved.
-  </footer>  <script>
-    function copyLink(id) {
-  var copyText = document.getElementById(id);
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  document.execCommand("copy");
-  const label = id === 'ptunnel' ? 'PTUNNEL' : id === 'surge' ? 'SURGE 5' : 'Link';
-  alert(`Daftar ${label} berhasil disalin!`);
-}
-  function copyVhost() {
-  const textArea = document.getElementById("vhostList");
-  textArea.select();
-  textArea.setSelectionRange(0, 99999);
-  document.execCommand("copy");
-  alert("Daftar WINDOWS berhasil disalin!");
-}
-function copyWindows() {
-  const textArea = document.getElementById("windowsList");
-  textArea.select();
-  textArea.setSelectionRange(0, 99999);
-  document.execCommand("copy");
-  alert("Daftar WINDOWS berhasil disalin!");
-}
-</script></body>
+  </div>  <script>
+    function copyText(id) {
+      const input = document.getElementById(id);
+      input.select();
+      input.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Link berhasil disalin!");
+    }
+  </script></body>
 </html>
